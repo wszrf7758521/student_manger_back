@@ -1,0 +1,30 @@
+spring:
+  mvc:
+   pathmatch:
+    matching-strategy: ant_path_matcher
+  application:
+    name: provider
+  datasource:
+    username: root
+    password: 'root'
+    url: jdbc:mysql://127.0.0.1:3306/leetcode?characterEncoding=UTF-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    timeout: 5000
+    lettuce:
+      pool:
+        max-active: 32
+        max-wait: -1
+        max-idle: 16
+        min-idle: 8
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+server:
+  port: 8888
